@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALZR'S SOCIALS</title>
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Center the text on the screen */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #800080; /* Purple background */
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        /* Centered text styling */
+        .content {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        .button-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .youtube-button {
+            background-color: #FF0000; /* YouTube red */
+        }
+        .youtube-button:hover {
+            background-color: #cc0000;
+        }
+
+        .instagram-button {
+            background-color: #C13584; /* Instagram pink */
+        }
+        .instagram-button:hover {
+            background-color: #a12d6f;
+        }
+
+        .discord-button {
+            background-color: #5865F2; /* Discord blue */
+        }
+        .discord-button:hover {
+            background-color: #4653c2;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Centered Text -->
+    <div class="content">
+        ALZR'S SOCIALS
+    </div>
+
+    <!-- Social Buttons -->
+    <div class="button-container">
+        <button class="social-button youtube-button" onclick="window.open('https://youtube.com/@alzrVR', '_blank')">
+            YT
+        </button>
+        <button class="social-button instagram-button" onclick="window.open('https://instagram.com/alzryt', '_blank')">
+            IG
+        </button>
+        <button class="social-button discord-button" onclick="window.open('https://discord.gg/EdVzy6vf99', '_blank')">
+            MY DC
+        </button>
+        <button class="social-button discord-button" onclick="window.open('https://discord.gg/w2qmmnCtwJ', '_blank')">
+            FRIEND'S DC
+        </button>
+    </div>
+
+    <!-- JavaScript to change the tab title -->
+    <script>
+        const titles = ["@", "@a", "@al", "@alz", "@alzr", "@alzrV", "@alzrVR", "@alzrVR", "@alzrV", "@alzr", "@alz", "@al", "@a", "@"];
+        let titleIndex = 0;
+
+        setInterval(() => {
+            document.title = titles[titleIndex];
+            titleIndex = (titleIndex + 1) % titles.length;
+        }, 750); // Change every 2 seconds
+    </script>
+
+</body>
+</html>
